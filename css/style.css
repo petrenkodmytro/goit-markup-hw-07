@@ -11,7 +11,6 @@
   --btn-service-hover: #188ce8;
   --border-cads: 1px solid #eeeeee;
   --icon: #afb1b8;
-
   --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -86,26 +85,23 @@ button {
 
 /* ----------header---------- */
 
-.page-header {
+.header {
   background-color: var(--secondary-bg-color);
   border-bottom: 1px solid #ececec;
 }
 
-.nav-container {
+.page-header {
   display: flex;
   height: 80px;
 }
 
-.nav-container .item {
+.nav-list_item:not(:last-child),
+.contact_item:not(:last-child) {
   margin-right: 50px;
 }
 
-.nav-container .item:last-child {
-  margin-right: 0px;
-}
-
 .nav,
-.nav-link,
+.nav-list,
 .contact {
   display: flex;
   padding: 0;
@@ -131,8 +127,8 @@ button {
   color: var(--accent-color);
 }
 
-.nav-link-item,
-.contact-item {
+.nav-list_link,
+.contact_link {
   padding: 32px 0;
   font-weight: 500;
   line-height: 1.14;
@@ -142,21 +138,44 @@ button {
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
-.contact-item {
+.nav-list_link:hover,
+.nav-list_link:focus,
+.contact_link:hover,
+.contact_link:focus {
+  color: var(--accent-color);
+}
+
+.contact_link {
   display: flex;
   align-items: center;
   color: var(--secondary-color);
 }
 
-.contact-item .icon {
+.contact_icon {
   display: block;
   margin-right: 10px;
   fill: currentColor;
 }
 
-.contact-item:hover .icon,
-.contact-item:focus .icon {
+.contact_link:hover .contact_icon,
+.contact_link:focus .contact_icon {
   fill: currentColor;
+}
+
+.current {
+  position: relative;
+  color: var(--accent-color);
+}
+
+.current::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 /* ----------hero---------- */
@@ -454,7 +473,6 @@ button {
   color: var(--brand-color);
   background-color: var(--bg-color-btn-filter);
   border-radius: 4px;
-  border: none;
 
   transition: box-shadow var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function),
     color var(--transition-duration) var(--transition-timing-function);
@@ -546,7 +564,7 @@ button {
   padding: 60px 0;
 }
 
-.footer-page {
+.page-footer {
   display: flex;
   align-items: baseline;
 }
@@ -570,23 +588,26 @@ button {
   font-style: normal;
 }
 
-.footer-contact .item:not(:last-child) {
+.footer-contact_item:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.footer-contact-link {
-  line-height: 1.71;
-  color: var(--secondary-bg-color);
-
-  transition: color var(--transition-duration) var(--transition-timing-function);
-}
-
-.footer-contact-item {
-  line-height: 1.71;
+.footer-contact_link {
   color: var(--footer-contact-item);
 
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
+
+.footer-contact_link--white {
+  color: var(--secondary-bg-color);
+}
+
+.footer-contact_link:hover,
+.footer-contact_link:focus {
+  color: var(--accent-color);
+}
+
+/* ----------join---------- */
 
 .join {
   margin-left: 70px;
@@ -615,6 +636,8 @@ button {
 .join .link:focus {
   background-color: var(--accent-color);
 }
+
+/* ----------subscribe---------- */
 
 .subscribe {
   margin-left: auto;
@@ -861,33 +884,4 @@ border: 1px solid var(--accent-color);
 .btn-send:focus {
   background-color: var(--btn-service-hover);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-/* ----------effects---------- */
-
-.nav-link-item:hover,
-.nav-link-item:focus,
-.contact-item:hover,
-.contact-item:focus,
-.footer-contact-link:hover,
-.footer-contact-link:focus,
-.footer-contact-item:hover,
-.footer-contact-item:focus {
-  color: var(--accent-color);
-}
-
-.current {
-  position: relative;
-  color: var(--accent-color);
-}
-
-.current::after {
-  position: absolute;
-  bottom: 0;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
 }
