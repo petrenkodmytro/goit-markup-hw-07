@@ -32,7 +32,6 @@ button {
   display: block;
   cursor: pointer;
   border: none;
-  border-radius: 4px;
 }
 
 .link {
@@ -74,6 +73,39 @@ button {
   margin: -1px;
 }
 
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  color: var(--secondary-bg-color);
+  background-color: var(--accent-color);
+  -webkit-transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
+}
+.btn:hover, .btn:focus {
+  background-color: var(--btn-service-hover);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -82,15 +114,10 @@ button {
 
 .logo {
   display: block;
-  margin-right: 93px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: var(--color-logo);
-}
-
-.logo > span {
   color: var(--accent-color);
 }
 
@@ -150,9 +177,7 @@ button {
   -webkit-transition: fill var(--transition-duration) var(--transition-timing-function);
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
-
-.btn-close:hover .icon-close,
-.btn-close:focus .icon-close {
+.btn-close:hover .icon-close, .btn-close:focus .icon-close {
   fill: var(--accent-color);
 }
 
@@ -239,9 +264,9 @@ button {
 
 .input-checkbox {
   /* -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: absolute; */
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute; */
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -262,52 +287,18 @@ button {
   -webkit-transition: background-color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
   transition: background-color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
 }
-
 .input-checkbox:checked ~ .form-icon-check {
   background-color: var(--accent-color);
   border-color: transparent;
 }
-
 .input-checkbox:focus ~ .form-icon-check {
   border-color: var(--accent-color);
 }
 
-.btn-send {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.form__btn {
   min-width: 200px;
-  padding: 10px 0;
   margin-left: auto;
   margin-right: auto;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  color: var(--secondary-bg-color);
-  background-color: var(--accent-color);
-  -webkit-transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
-}
-
-.btn-send:hover,
-.btn-send:focus {
-  background-color: var(--btn-service-hover);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .header {
@@ -322,8 +313,15 @@ button {
   height: 80px;
 }
 
-.nav-list_item:not(:last-child),
-.contact_item:not(:last-child) {
+.header__logo {
+  margin-right: 93px;
+}
+.header__logo > span {
+  color: var(--color-logo);
+}
+
+.nav-list__item:not(:last-child),
+.contact__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -343,8 +341,8 @@ button {
   margin-left: auto;
 }
 
-.nav-list_link,
-.contact_link {
+.nav-list__link,
+.contact__link {
   padding: 32px 0;
   font-weight: 500;
   line-height: 1.14;
@@ -354,14 +352,14 @@ button {
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
-.nav-list_link:hover,
-.nav-list_link:focus,
-.contact_link:hover,
-.contact_link:focus {
+.nav-list__link:hover,
+.nav-list__link:focus,
+.contact__link:hover,
+.contact__link:focus {
   color: var(--accent-color);
 }
 
-.contact_link {
+.contact__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,14 +369,14 @@ button {
   color: var(--secondary-color);
 }
 
-.contact_icon {
+.contact__icon {
   display: block;
   margin-right: 10px;
   fill: currentColor;
 }
 
-.contact_link:hover .contact_icon,
-.contact_link:focus .contact_icon {
+.contact__link:hover .contact__icon,
+.contact__link:focus .contact__icon {
   fill: currentColor;
 }
 
@@ -423,32 +421,10 @@ button {
   color: var(--secondary-bg-color);
 }
 
-.btn-servise {
+.hero__btn {
   min-width: 216px;
   margin: 30px auto 0;
   padding: 10px 32px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--secondary-bg-color);
-  background-color: var(--accent-color);
-  border-radius: 4px;
-  -webkit-transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
-}
-
-.btn-servise:hover,
-.btn-servise:focus {
-  background-color: var(--btn-service-hover);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .advantages {
@@ -833,18 +809,11 @@ button {
           align-items: baseline;
 }
 
-.footer-logo {
-  display: block;
+.footer__logo {
   margin-bottom: 20px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--secondary-bg-color);
 }
-
-.footer-logo > span {
-  color: var(--accent-color);
+.footer__logo > span {
+  color: var(--secondary-bg-color);
 }
 
 .footer-contact {
@@ -852,22 +821,22 @@ button {
   font-style: normal;
 }
 
-.footer-contact_item:not(:last-child) {
+.footer-contact__item:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.footer-contact_link {
+.footer-contact__link {
   color: var(--footer-contact-item);
   -webkit-transition: color var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
-.footer-contact_link--white {
+.footer-contact__link--white {
   color: var(--secondary-bg-color);
 }
 
-.footer-contact_link:hover,
-.footer-contact_link:focus {
+.footer-contact__link:hover,
+.footer-contact__link:focus {
   color: var(--accent-color);
 }
 
@@ -922,40 +891,9 @@ button {
 }
 
 /* .input-subscribe:not(:placeholder-shown) {
-border: 1px solid var(--accent-color);
-} */
-.btn-subscribe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border: 1px solid var(--accent-color);
+  } */
+.subscribe__btn {
   gap: 10px;
   min-width: 200px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  color: var(--secondary-bg-color);
-  background-color: var(--accent-color);
-  -webkit-transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
-  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
-}
-
-.btn-subscribe:hover,
-.btn-subscribe:focus {
-  background-color: var(--btn-service-hover);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=main.css.map */

@@ -1,127 +1,99 @@
 .footer {
-    background-color: var(--brand-bg-color);
-    padding: 60px 0;
-  }
-  
-  .page-footer {
-    display: flex;
-    align-items: baseline;
-  }
-  
-  .footer-logo {
-    display: block;
-    margin-bottom: 20px;
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+  background-color: var(--brand-bg-color);
+  padding: 60px 0;
+}
+
+.page-footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+
+  & > span {
     color: var(--secondary-bg-color);
   }
-  
-  .footer-logo > span {
-    color: var(--accent-color);
-  }
-  
-  .footer-contact {
-    line-height: 1.71;
-    font-style: normal;
-  }
-  
-  .footer-contact_item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-  
-  .footer-contact_link {
-    color: var(--footer-contact-item);
-  
-    transition: color var(--transition-duration) var(--transition-timing-function);
-  }
-  
-  .footer-contact_link--white {
-    color: var(--secondary-bg-color);
-  }
-  
-  .footer-contact_link:hover,
-  .footer-contact_link:focus {
-    color: var(--accent-color);
-  }
-  
-  /* ----------join---------- */
-  
-  .join {
-    margin-left: 70px;
-  }
-  
-  .join-text,
-  .subscribe-text {
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: var(--secondary-bg-color);
-  }
-  
-  .join .link {
-    color: var(--secondary-bg-color);
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .join .icon-social {
-    fill: currentColor;
-  }
-  
-  .join .link:hover,
-  .join .link:focus {
-    background-color: var(--accent-color);
-  }
-  
-  /* ----------subscribe---------- */
-  
-  .subscribe {
-    margin-left: auto;
-  }
-  
-  .subscribe-wrapper {
-    display: flex;
-    gap: 12px;
-  }
-  
-  .input-subscribe {
-    min-width: 358px;
-    padding: 16px 12px;
-    background-color: inherit;
-    color: var(--footer-contact-item);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-  }
-  /* .input-subscribe:not(:placeholder-shown) {
+}
+
+.footer-contact {
+  line-height: 1.71;
+  font-style: normal;
+}
+
+.footer-contact__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-contact__link {
+  color: var(--footer-contact-item);
+
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+.footer-contact__link--white {
+  color: var(--secondary-bg-color);
+}
+
+.footer-contact__link:hover,
+.footer-contact__link:focus {
+  color: var(--accent-color);
+}
+
+/* ----------join---------- */
+
+.join {
+  margin-left: 70px;
+}
+
+.join-text,
+.subscribe-text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--secondary-bg-color);
+}
+
+.join .link {
+  color: var(--secondary-bg-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.join .icon-social {
+  fill: currentColor;
+}
+
+.join .link:hover,
+.join .link:focus {
+  background-color: var(--accent-color);
+}
+
+/* ----------subscribe---------- */
+
+.subscribe {
+  margin-left: auto;
+}
+
+.subscribe-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.input-subscribe {
+  min-width: 358px;
+  padding: 16px 12px;
+  background-color: inherit;
+  color: var(--footer-contact-item);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+/* .input-subscribe:not(:placeholder-shown) {
   border: 1px solid var(--accent-color);
   } */
-  
-  .btn-subscribe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    min-width: 200px;
-  
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    align-content: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    border-radius: 4px;
-    color: var(--secondary-bg-color);
-    background-color: var(--accent-color);
-  
-    transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
-  }
-  
-  .btn-subscribe:hover,
-  .btn-subscribe:focus {
-    background-color: var(--btn-service-hover);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  }
+
+.subscribe__btn {
+  gap: 10px;
+  min-width: 200px;
+}
