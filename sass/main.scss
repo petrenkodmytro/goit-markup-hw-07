@@ -2,3 +2,20 @@
 @import './base/common';
 
 @import './utils/variabels';
+@import './utils/hidden';
+
+@import './components/btn';
+@import './components/container';
+@import './components/logo';
+@import './components/modal';
+@import './components/form';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/advantages';
+@import './layouts/work';
+@import './layouts/team';
+@import './layouts/clients';
+@import './layouts/filter-cards';
+@import './layouts/cads';
+@import './layouts/footer';
