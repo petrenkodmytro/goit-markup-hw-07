@@ -60,25 +60,25 @@
   display: block;
   margin-right: 10px;
   fill: currentColor;
-}
 
-.contact__link:hover .contact__icon,
-.contact__link:focus .contact__icon {
-  fill: currentColor;
+  .contact__link:hover &,
+  .contact__link:focus & {
+    fill: currentColor;
+  }
 }
 
 .current {
   position: relative;
   color: var(--accent-color);
-}
 
-.current::after {
-  position: absolute;
-  bottom: 0;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
 }

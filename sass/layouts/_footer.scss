@@ -29,15 +29,15 @@
   color: var(--footer-contact-item);
 
   transition: color var(--transition-duration) var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .footer-contact__link--white {
   color: var(--secondary-bg-color);
-}
-
-.footer-contact__link:hover,
-.footer-contact__link:focus {
-  color: var(--accent-color);
 }
 
 /* ----------join---------- */
@@ -46,8 +46,8 @@
   margin-left: 70px;
 }
 
-.join-text,
-.subscribe-text {
+.join__text,
+.subscribe__text {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -56,18 +56,9 @@
   color: var(--secondary-bg-color);
 }
 
-.join .link {
+.join__link {
   color: var(--secondary-bg-color);
   background: rgba(255, 255, 255, 0.1);
-}
-
-.join .icon-social {
-  fill: currentColor;
-}
-
-.join .link:hover,
-.join .link:focus {
-  background-color: var(--accent-color);
 }
 
 /* ----------subscribe---------- */
@@ -76,12 +67,12 @@
   margin-left: auto;
 }
 
-.subscribe-wrapper {
+.subscribe__form {
   display: flex;
   gap: 12px;
 }
 
-.input-subscribe {
+.subscribe__input {
   min-width: 358px;
   padding: 16px 12px;
   background-color: inherit;
